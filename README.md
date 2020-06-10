@@ -19,11 +19,18 @@ Download sample data from https://www.postgresqltutorial.com/postgresql-sample-d
   # Or (take longer) cpanm -L local --installdeps .
 ```
 
-  Modify `environments/development.yml` as needed.
-  Change `DBIC` plugin DSN to the database imported above
+## Testing
+
+  The unit tests are using in-memory database so no need to have database setup in order to run the tests
+```
+  prove -rlv
+```
 
 ## Run
 
+  Modify `environments/development.yml` as needed.
+  Change `DBIC` plugin DSN to the database imported above
+  Run
 ```
   plackup bin/app.psgi
 ```
