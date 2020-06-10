@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="[% settings.charset %]">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>[% title %]</title>
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="[% request.uri_base %]/css/style_dt.css">
+
+  <!-- Grab jQuery from a CDN, fall back to local if necessary -->
+  <script src="//code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript">/* <![CDATA[ */
+    !window.jQuery && document.write('<script type="text/javascript" src="[% request.uri_base %]/javascripts/jquery-3.5.1.js"><\/script>')
+/* ]]> */</script>
+
+  <script src="//cdn.datatables.net/v/dt/dt-1.10.21/datatables.js"></script>
+
+
+</head>
+
+<body>
+  [% content %]
+  <div id="footer">
+    Powered by <a href="http://perldancer.org/">Dancer2</a> [% dancer_version %]
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<div id="page">
+  <div id="sidebar">
+    <ul id="sidebar-items">
+      <li>
+        <h3>Links</h3>
+        <ul class="links">
+
+          <li><a href="[% request.uri_base %]/customers">Customer List</a></li>
+          <li><a href="[% request.uri_base %]/films">Film List</a></li>
+        </ul>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <div id="content">
+    <div id="header">
+      <h1>Customers</h1>
+      <h2>List of Customers</h2>
+    </div>
+
+    <table id="example" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>Zip Code</th>
+          <th>Country</th>
+          <th>Phone</th>
+          <th>Active</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>Zip Code</th>
+          <th>Country</th>
+          <th>Phone</th>
+          <th>Active</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('#example').DataTable({
+      "processing": true,
+      "serverSide": true,
+      "ajax": "/api/customers",
+      "columns": [
+        { data: 'name' },
+        { data: 'address' },
+        { data: 'city' },
+        { data: 'zip_code' },
+        { data: 'country' },
+        { data: 'phone' },
+        { data: 'notes' }
+      ]
+    });
+  });
+</script>
