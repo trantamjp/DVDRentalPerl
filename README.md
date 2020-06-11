@@ -35,3 +35,7 @@ Download sample data from https://www.postgresqltutorial.com/postgresql-sample-d
   plackup bin/app.psgi
 ```
 Goto http://localhost:5000/
+
+## Demo
+
+http://34.94.42.251:5000/
