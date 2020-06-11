@@ -38,5 +38,4 @@ Goto http://localhost:5000/
 
 ## Demo
 
-http://35.215.111.93:5000/
-
+<a href="http://35.215.111.93:5000/" target="_blank">http://35.215.111.93:5000/</a>
