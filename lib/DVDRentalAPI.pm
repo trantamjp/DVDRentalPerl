@@ -13,17 +13,21 @@ get '/' => sub {
     return undef;
 };
 
-get '/customers' => sub {
+any [ 'get', 'post' ] => '/customers' => sub {
 
-    my $query_params = query_parameters;
-    return Controller::Customer::get_list($query_params);
+    my $body_parameters = body_parameters;
+    my $args            = $body_parameters->get('args');
+
+    return Controller::Customer::get_list($args);
 
 };
 
-get '/films' => sub {
+any [ 'get', 'post' ] => '/films' => sub {
 
-    my $query_params = query_parameters;
-    return Controller::Film::get_list($query_params);
+    my $body_parameters = body_parameters;
+    my $args            = $body_parameters->get('args');
+
+    return Controller::Film::get_list($args);
 
 };
 

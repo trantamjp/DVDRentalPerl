@@ -4,7 +4,7 @@
       <li>
         <h3>Links</h3>
         <ul class="links">
-
+          <li><a href="[% request.uri_base %]">Home</a></li>
           <li><a href="[% request.uri_base %]/customers">Customer List</a></li>
           <li><a href="[% request.uri_base %]/films">Film List</a></li>
         </ul>
@@ -52,15 +52,21 @@
     $('#example').DataTable({
       "processing": true,
       "serverSide": true,
-      "ajax": "/api/films",
+      "ajax": {
+        url: "/api/films",
+        type: "POST",
+        data: function (args) {
+          return JSON.stringify({ 'args': args });
+        }
+      },
       "columns": [
         { data: 'title' },
         { data: 'category' },
         { data: 'description' },
         { data: 'actors' },
-        { data: 'length' },
-        { data: 'rating' },
-        { data: 'price' }
+        { data: 'length', searchable: false },
+        { data: 'rating', searchable: false },
+        { data: 'price', searchable: false }
       ]
     });
   });
