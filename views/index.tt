@@ -70,6 +70,19 @@
         </li>
 
       </ol>
+
+      <h1>Other Samples</h1>
+      <h2><a href="" class="pythondemo">Python Demo</a>
+        <br><a href="" class="nodejsdemo">NodeJS Demo</a>
+      </h2>
+
     </div>
   </div>
 </div>
+<script>
+
+  $('.perldemo').attr('href', $(location).attr('protocol') + '//' + $(location).attr('hostname') + ':5000');
+  $('.pythondemo').attr('href', $(location).attr('protocol') + '//' + $(location).attr('hostname') + ':5001');
+  $('.nodejsdemo').attr('href', $(location).attr('protocol') + '//' + $(location).attr('hostname') + ':5002');
+
+</script>

@@ -8,6 +8,11 @@
           <li><a href="[% request.uri_base %]/customers">Customer List</a></li>
           <li><a href="[% request.uri_base %]/films">Film List</a></li>
         </ul>
+        <h3>Other Demos</h3>
+        <ul class="links">
+          <li><a href="" class="pythondemo">Python Demo</a></li>
+          <li><a href="" class="nodejsdemo">NodeJS Demo</a></li>
+        </ul>
       </li>
 
     </ul>
@@ -70,4 +75,12 @@
       ]
     });
   });
+</script>
+
+<script>
+
+  $('.perldemo').attr('href', $(location).attr('protocol') + '//' + $(location).attr('hostname') + ':5000');
+  $('.pythondemo').attr('href', $(location).attr('protocol') + '//' + $(location).attr('hostname') + ':5001');
+  $('.nodejsdemo').attr('href', $(location).attr('protocol') + '//' + $(location).attr('hostname') + ':5002');
+
 </script>
