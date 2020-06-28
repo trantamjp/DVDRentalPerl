@@ -8,6 +8,12 @@ use Dancer2::Plugin::DBIC;
 set template => 'template_toolkit';
 
 get '/' => sub {
+    my $newurl = URI->new(request->base);
+    $newurl->port(80);
+    redirect $newurl->canonical;
+};
+
+get '/home' => sub {
     template 'index' => { 'title' => 'DVDRental' };
 };
 

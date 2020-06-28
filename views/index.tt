@@ -13,23 +13,11 @@
   <div id="sidebar">
     <ul id="sidebar-items">
       <li>
-        <h3>Join the community</h3>
+        <h3>Menu</h3>
         <ul class="links">
-
-          <li><a href="http://perldancer.org/">PerlDancer</a></li>
-          <li><a href="http://twitter.com/PerlDancer/">Official Twitter</a></li>
-          <li><a href="https://github.com/PerlDancer/Dancer2/">GitHub Community</a></li>
-        </ul>
-      </li>
-
-      <li>
-        <h3>Browse the documentation</h3>
-
-        <ul class="links">
-          <li><a href="https://metacpan.org/pod/Dancer2::Manual">Introduction</a></li>
-          <li><a href="https://metacpan.org/pod/Dancer2::Cookbook">Cookbook</a></li>
-          <li><a href="https://metacpan.org/pod/Dancer2::Tutorial"
-              title="a tutorial to build a small blog engine with Dancer">Tutorial</a></li>
+          <li><a href="[% request.uri_base %]/home">Home</a></li>
+          <li><a href="[% request.uri_base %]/customers">Customer List</a></li>
+          <li><a href="[% request.uri_base %]/films">Film List</a></li>
         </ul>
       </li>
 
@@ -55,26 +43,19 @@
 
       <ol>
         <li>
-          <p>Customers List<br><a href="[% request.uri_base %]/customers">[% request.uri_base %]/customers</a></p>
+          <p><a href="/customers">Customers List</a></p>
           <p>
-            DataTable with server-side processing.<br /> The API is <a href="[% request.uri_base %]/api/customers"
-              target="_blank">[% request.uri_base | html %]/api/customers</a>.
-            Without the query parameters, the API returns only the first 10 rows.</p>
+            DataTable with server-side processing.<br /> The API sample is <a href="[% request.uri_base %]/api/customers"
+              target="_blank">here</a> (showing the first 10 rows).</p>
         </li>
         <li>
-          <p>Films List<br><a href="[% request.uri_base %]/films">[% request.uri_base %]/films</a></p>
+          <p><a href="[% request.uri_base %]/films">Films List</a></p>
           <p>
-            DataTable with server-side processing.<br /> The API is <a href="[% request.uri_base %]/api/films"
-              target="_blank">[% request.uri_base | html %]/api/films</a>.
-            Without the query parameters, the API returns only the first 10 rows.</p>
+            DataTable with server-side processing.<br /> The API sample is <a href="[% request.uri_base %]/api/films"
+              target="_blank">here</a> (showing the first 10 rows).</p>
         </li>
 
       </ol>
-
-      <h1>Other Samples</h1>
-      <h2><a href="" class="pythondemo">Python Demo</a>
-        <br><a href="" class="nodejsdemo">NodeJS Demo</a>
-      </h2>
 
     </div>
   </div>

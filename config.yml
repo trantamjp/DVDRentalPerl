@@ -7,6 +7,8 @@
 # Your application's name
 # appname: "DVDRental"
 
+behind_proxy: 1
+
 # The default layout to use for your application (located in
 # views/layouts/main.tt)
 layout: "main"

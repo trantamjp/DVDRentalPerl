@@ -2,16 +2,11 @@
   <div id="sidebar">
     <ul id="sidebar-items">
       <li>
-        <h3>Links</h3>
+        <h3>Menu</h3>
         <ul class="links">
-          <li><a href="[% request.uri_base %]">Home</a></li>
+          <li><a href="[% request.uri_base %]/home">Home</a></li>
           <li><a href="[% request.uri_base %]/customers">Customer List</a></li>
           <li><a href="[% request.uri_base %]/films">Film List</a></li>
-        </ul>
-        <h3>Other Demos</h3>
-        <ul class="links">
-          <li><a href="" class="pythondemo">Python Demo</a></li>
-          <li><a href="" class="nodejsdemo">NodeJS Demo</a></li>
         </ul>
       </li>
 
@@ -75,12 +70,4 @@
       ]
     });
   });
-</script>
-
-<script>
-
-  $('.perldemo').attr('href', $(location).attr('protocol') + '//' + $(location).attr('hostname') + ':5000');
-  $('.pythondemo').attr('href', $(location).attr('protocol') + '//' + $(location).attr('hostname') + ':5001');
-  $('.nodejsdemo').attr('href', $(location).attr('protocol') + '//' + $(location).attr('hostname') + ':5002');
-
 </script>
