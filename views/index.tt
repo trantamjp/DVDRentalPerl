@@ -33,12 +33,12 @@
 
     <div id="getting-started">
       <h1>Perl Samples</h1>
-      <h2>Github <a href="https://github.com/trantamjp/DVDRentalPerl">https://github.com/trantamjp/DVDRentalPerl</a>
+      <h2>Github <a href="https://github.com/trantamjp/DVDRentalPerl" target="_blank">https://github.com/trantamjp/DVDRentalPerl</a>
       </h2>
 
       <h1>Sample Data</h1>
       <h2>Download from here <a
-          href="https://www.postgresqltutorial.com/postgresql-sample-database/">https://www.postgresqltutorial.com/postgresql-sample-database/</a>
+          href="https://www.postgresqltutorial.com/postgresql-sample-database/" target="_blank">https://www.postgresqltutorial.com/postgresql-sample-database/</a>
       </h2>
 
       <ol>
