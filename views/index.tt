@@ -43,16 +43,18 @@
 
       <ol>
         <li>
+          <form id="formCustomerAPI" action="[% request.uri_base %]/api/customers" method="POST" target="_blank"></form>
           <p><a href="/customers">Customers List</a></p>
           <p>
             DataTable with server-side processing.<br /> The API sample is <a href="[% request.uri_base %]/api/customers"
-              target="_blank">here</a> (showing the first 10 rows).</p>
+              target="_blank" onclick="document.forms['formCustomerAPI'].submit(); return false;">here</a> (showing the first 10 rows).</p>
         </li>
         <li>
+          <form id="formFilmAPI" action="[% request.uri_base %]/api/films" method="POST" target="_blank"></form>
           <p><a href="[% request.uri_base %]/films">Films List</a></p>
           <p>
             DataTable with server-side processing.<br /> The API sample is <a href="[% request.uri_base %]/api/films"
-              target="_blank">here</a> (showing the first 10 rows).</p>
+              target="_blank" onclick="document.forms['formFilmAPI'].submit(); return false;">here</a> (showing the first 10 rows).</p>
         </li>
 
       </ol>

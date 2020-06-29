@@ -55,8 +55,9 @@
       "ajax": {
         url: "/api/films",
         type: "POST",
+        contentType: "application/json",
         data: function (args) {
-          return JSON.stringify({ 'args': args });
+          return JSON.stringify(args);
         }
       },
       "columns": [

@@ -13,20 +13,16 @@ get '/' => sub {
     return undef;
 };
 
-any [ 'get', 'post' ] => '/customers' => sub {
+any ['post'] => '/customers' => sub {
 
-    my $body_parameters = body_parameters;
-    my $args            = $body_parameters->get('args');
-
+    my $args = body_parameters;
     return Controller::Customer::get_list($args);
 
 };
 
-any [ 'get', 'post' ] => '/films' => sub {
+any ['post'] => '/films' => sub {
 
-    my $body_parameters = body_parameters;
-    my $args            = $body_parameters->get('args');
-
+    my $args = body_parameters;
     return Controller::Film::get_list($args);
 
 };

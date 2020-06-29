@@ -22,11 +22,11 @@ Controller::Film
 sub get_list {
     my ($args) = @_;
 
-    my $start   = $args->{'start'}   // 0;
-    my $length  = $args->{'length'}  // 10;
-    my $orders  = $args->{'order'}   // [];
-    my $search  = $args->{'search'}  // {};
-    my $columns = $args->{'columns'} // [];
+    my $start  = $args->{'start'}  // 0;
+    my $length = $args->{'length'} // 10;
+    my @orders = $args->get_all('order');
+    my $search  = $args->{'search'} // {};
+    my @columns = $args->get_all('columns');
 
     my $rs            = schema('dvdrental')->resultset('FilmList');
     my $records_total = $rs->count;
@@ -35,7 +35,7 @@ sub get_list {
     my $search_value = $search->{'value'} // '';
     my @filters      = ();
     my $dbh          = schema('dvdrental')->storage->dbh;
-    foreach my $column (@$columns) {
+    foreach my $column (@columns) {
         next unless $column->{'searchable'};
 
         my $column_search_value = $column->{'search'}{'value'} // '';
@@ -57,9 +57,9 @@ sub get_list {
 
     # get paging data
     my @order_by = ();
-    foreach my $order (@$orders) {
+    foreach my $order (@orders) {
         next unless $order->{'column'} =~ /^\d+$/;
-        my $column = $columns->[ $order->{'column'} ] or next;
+        my $column = $columns[ $order->{'column'} ] or next;
 
         my $order_column_name = $column->{'data'};
         my $order_dir         = $order->{'dir'} eq 'desc' ? '-desc' : '-asc';
